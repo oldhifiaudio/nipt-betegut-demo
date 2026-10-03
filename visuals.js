@@ -1,4 +1,4 @@
-import {escapeHtml as e,icon,fullDate} from './ui.js';
+import {escapeHtml as e,icon,fullDate,dnaMotif} from './ui.js';
 import {currentEvaluation,isPlanCurrent} from './state.js';
 import {weekLabel} from './engine.js';
 import {SOURCES} from './knowledge.js';
@@ -33,16 +33,29 @@ export function heroArtwork(kind='doctor'){
     <path d="M205 53a10 10 0 0 1 17-6 10 10 0 0 1 17 6c0 8-17 20-17 20s-17-12-17-20" fill="#ca876e"/>
     <circle cx="74" cy="65" r="6" fill="#dbb978"/><circle cx="382" cy="99" r="5" fill="#83b6ad"/><path d="M365 47v15m-7-7h14" stroke="#3a817b" stroke-width="3" stroke-linecap="round"/>
   </svg>`;
-  return `<svg class="hero-art doctor-art" viewBox="0 0 440 285" role="img" aria-label="DNS-spirál és a T7, T15, T16, T22 jelzések sematikus illusztrációja">
-    <circle cx="241" cy="143" r="118" fill="#dcece7"/><circle cx="241" cy="143" r="91" fill="none" stroke="#b1cfc5" stroke-dasharray="3 8"/>
-    <path d="M217 41c-78 42 112 135 17 195M268 40c72 52-108 135-26 198" fill="none" stroke="#337d74" stroke-width="9" stroke-linecap="round"/>
-    <g stroke="#7eb2a4" stroke-width="4" stroke-linecap="round"><path d="m217 48 46 2m-49 22 43 7m-18 17 2 11m-3 11-1 12m-12 9 26 11m-40 9 53 9m-46 16 42 3m-22 17 4 9m-9 16 0 9"/></g>
-    <rect x="43" y="67" width="114" height="67" rx="15" fill="#fff"/><circle cx="64" cy="86" r="5" fill="#dbad65"/><text x="77" y="91" class="art-caption">T7</text><path d="m62 106 12 12m-12 0 12-12m16 0 12 12m-12 0 12-12" stroke="#d4ac6c" stroke-width="4" stroke-linecap="round"/>
-    <rect x="306" y="31" width="99" height="66" rx="15" fill="#fff"/><circle cx="326" cy="51" r="5" fill="#a393b8"/><text x="339" y="56" class="art-caption">T15</text><path d="m326 70 11 11m-11 0 11-11m13 0 11 11m-11 0 11-11" stroke="#a393b8" stroke-width="4" stroke-linecap="round"/>
-    <rect x="51" y="186" width="122" height="66" rx="15" fill="#fff"/><circle cx="73" cy="206" r="5" fill="#6395b0"/><text x="86" y="211" class="art-caption">T16</text><path d="M73 230h62" stroke="#6395b0" stroke-width="5" stroke-linecap="round"/>
-    <rect x="311" y="185" width="93" height="66" rx="15" fill="#fff"/><circle cx="332" cy="205" r="5" fill="#5d998b"/><text x="345" y="210" class="art-caption">T22</text><path d="m331 223 13 13m-13 0 13-13m10 0 13 13m-13 0 13-13" stroke="#5d998b" stroke-width="4" fill="none" stroke-linecap="round"/>
-    <path d="M158 101h27m92-44 28-2M173 216l29-8m74 0 32 10" stroke="#98b8ae" stroke-width="2" stroke-dasharray="4 5"/>
-    <circle cx="105" cy="39" r="4" fill="#b8cdb9"/><path d="M352 137v14m-7-7h14" stroke="#d0a66f" stroke-width="3" stroke-linecap="round"/>
+  const cards=[
+    {n:7,x:23,y:48,ink:'#b38a47',tint:'#f7f0e1'},
+    {n:15,x:295,y:48,ink:'#9380ad',tint:'#f0ecf7'},
+    {n:16,x:23,y:173,ink:'#5b8da7',tint:'#eaf2f7'},
+    {n:22,x:295,y:173,ink:'#548f80',tint:'#e8f3ed'}
+  ].map(({n,x,y,ink,tint})=>`<g transform="translate(${x} ${y})">
+    <rect x="0" y="3" width="122" height="64" rx="16" fill="#264f42" opacity=".04"/>
+    <rect width="122" height="64" rx="16" fill="#fff" stroke="#d7e4da" stroke-width=".75"/>
+    <rect x="12" y="15" width="34" height="34" rx="11" fill="${tint}"/>
+    <g transform="translate(29 32)" fill="none" stroke="${ink}" stroke-width="3.5" stroke-linecap="round">
+      <path d="M-7-9C-7-4 7 4 7 9M7-9C7-4-7 4-7 9"/>
+    </g>
+    <text class="hero-chromosome-label" x="57" y="30" fill="#3e6259" font-size="15" font-weight="650">T${n}</text>
+    <text class="hero-chromosome-caption" x="57" y="44" fill="#7b9085" font-size="8.5">kromoszóma</text>
+  </g>`).join('');
+  return `<svg class="hero-art doctor-art" viewBox="0 0 440 285" role="img" aria-label="Szabályos kettős DNS-spirál, körülötte a T7, T15, T16 és T22 betegutak egységes jelképei. Sematikus illusztráció.">
+    <ellipse cx="220" cy="143" rx="108" ry="126" fill="#dfede5"/>
+    <ellipse cx="220" cy="143" rx="85" ry="108" fill="none" stroke="#bbd4c7" stroke-width="1" stroke-dasharray="2 7"/>
+    <g fill="none" stroke="#b0cbbb" stroke-width="1.4" stroke-linecap="round">
+      <path d="M145 80h17q12 0 18 9M295 80h-17q-12 0-18 9M145 205h17q12 0 18-9M295 205h-17q-12 0-18-9"/>
+    </g>
+    ${dnaMotif({cx:220,top:25,height:235,amplitude:37,stroke:6,rungs:17})}
+    ${cards}
   </svg>`;
 }
 
@@ -77,11 +90,36 @@ export function resultCompass(stage,cpmStatus,chromosome){
 }
 
 export function originDiagram(){return `<figure class="origin-diagram"><figcaption><div class="eyebrow">A vizsgálat logikája</div><h2>Három külön kérdés. Egy közös kép.</h2><p>A NIPT szűrőjelzése, a magzati lelet és a lepényi eredet külön értelmezendő.</p></figcaption><div class="origin-flow">
-  <div><svg viewBox="0 0 150 100" role="img" aria-label="Anyai vér, benne anyai és lepényi eredetű DNS-töredékek"><rect x="15" y="28" width="120" height="48" rx="24" fill="#e7efec"/><g fill="#c88e78"><ellipse cx="36" cy="51" rx="11" ry="6" transform="rotate(-20 36 51)"/><ellipse cx="104" cy="48" rx="11" ry="6" transform="rotate(18 104 48)"/><ellipse cx="77" cy="67" rx="10" ry="5"/></g><g stroke="#3e8077" stroke-width="3" stroke-linecap="round"><path d="m64 44 8 8m-8 0 8-8m43 16 6 6m-6 0 6-6m-77 9 7-7"/></g></svg><span class="flow-number">01</span><h3>Anyai vér</h3><p>Anyai és lepényi eredetű DNS-töredékek.</p></div>
+  <div><svg viewBox="0 0 160 112" role="img" aria-label="Vérminta, mellette az anyai és lepényi eredetű DNS-töredékek jelképei"><circle cx="80" cy="56" r="46" fill="#edf1e8"/>
+    <rect x="39" y="20" width="28" height="73" rx="13" fill="#fff" stroke="#9bb9a8" stroke-width="1.5"/>
+    <path d="M44 47h18v32a9 9 0 0 1-18 0z" fill="#deb8a6"/><path d="M44 47c6 3 12-3 18 0" fill="none" stroke="#bf8a73" stroke-width="1.3"/>
+    <rect x="37" y="15" width="32" height="13" rx="4" fill="#548b75"/><path d="M43 18v7m6-7v7m6-7v7m6-7v7" stroke="#8ab49f" stroke-width="1.3"/>
+    <ellipse cx="51" cy="63" rx="4.5" ry="2.5" fill="#bf8b75" transform="rotate(-20 51 63)"/><ellipse cx="55" cy="78" rx="4.5" ry="2.5" fill="#bf8b75" transform="rotate(18 55 78)"/>
+    <path d="M75 55h8" stroke="#b7cbbb" stroke-width="1.5" stroke-linecap="round"/>
+    <g transform="translate(104 39) rotate(-20)" stroke="#6c9c85" stroke-width="2" stroke-linecap="round"><path d="M-11-4h22m-22 8h22M-6-4v8M0-4v8M6-4v8"/></g>
+    <g transform="translate(109 71) rotate(17)" stroke="#b39073" stroke-width="2" stroke-linecap="round"><path d="M-10-4h20m-20 8h20M-5-4v8M1-4v8M6-4v8"/></g>
+    <circle cx="86" cy="24" r="2" fill="#bad0be"/><circle cx="91" cy="93" r="2.5" fill="#ceddcb"/>
+  </svg><span class="flow-number">01</span><h3>Anyai vér</h3><p>Anyai és lepényi eredetű DNS-töredékek.</p></div>
   <span class="flow-arrow" aria-hidden="true">${icon('chevron')}</span>
-  <div><svg viewBox="0 0 150 100" role="img" aria-label="A lepényi eredetű DNS jelének szűrővizsgálata"><circle cx="75" cy="51" r="35" fill="#e6eee8"/><path d="M58 20c-24 22 50 40 34 62M91 20c23 23-49 40-33 62M57 28h35M63 42h22M63 61h22M57 74h35" stroke="#3e8077" stroke-width="4" fill="none" stroke-linecap="round"/></svg><span class="flow-number">02</span><h3>NIPT-jelzés</h3><p>Szűrési eredmény. Önmagában nem diagnózis.</p></div>
+  <div><svg viewBox="0 0 160 112" role="img" aria-label="DNS-t vizsgáló nagyító és leletlap: a NIPT szűrővizsgálat"><circle cx="80" cy="56" r="46" fill="#e6efe9"/>
+    <rect x="42" y="13" width="63" height="87" rx="10" fill="#fff" stroke="#c0d5c8" stroke-width="1.5"/>
+    <path d="M53 24h14m6 0h8" stroke="#b4cbbc" stroke-width="2" stroke-linecap="round"/>
+    ${dnaMotif({cx:73,top:34,height:54,amplitude:14,stroke:2.8,rungs:11})}
+    <path d="m118 86 12 13" stroke="#568571" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="108" cy="76" r="17" fill="#f7faf5" stroke="#568571" stroke-width="2.5"/>
+    ${dnaMotif({cx:108,top:68,height:16,amplitude:5,turns:1,stroke:1.3,rungs:3})}
+  </svg><span class="flow-number">02</span><h3>NIPT-jelzés</h3><p>Szűrési eredmény. Önmagában nem diagnózis.</p></div>
   <span class="flow-arrow" aria-hidden="true">${icon('chevron')}</span>
-  <div><svg viewBox="0 0 150 100" role="img" aria-label="Két külön ág: magzati tisztázás és a gondozás egyeztetése"><path d="M30 52h35m0 0V26h26M65 52v26h26" fill="none" stroke="#85afa2" stroke-width="3"/><circle cx="108" cy="26" r="18" fill="#dcece7"/><circle cx="108" cy="78" r="18" fill="#f1e4d6"/><path d="m101 20 14 12m-14 0 14-12M101 78h14m-7-7v14" stroke="#446e69" stroke-width="2.5" stroke-linecap="round"/></svg><span class="flow-number">03</span><h3>Szakmai tisztázás</h3><p>Magzati diagnosztika és gondozás: külön kérdések.</p></div>
+  <div><svg viewBox="0 0 160 112" role="img" aria-label="Két külön ág: DNS-jelkép a magzati diagnosztikához, naptár a gondozás egyeztetéséhez"><circle cx="80" cy="56" r="46" fill="#f0f1e7"/>
+    <path d="M44 56h21m0 0V29h21M65 56v27h21" fill="none" stroke="#9ab9a5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="32" cy="56" r="13" fill="#dcebe0" stroke="#b9d1be" stroke-width="1"/>
+    <rect x="26" y="49" width="12" height="15" rx="2.5" fill="#fff" stroke="#69947c" stroke-width="1.4"/><path d="M29 54h6m-6 4h4" stroke="#69947c" stroke-width="1.4" stroke-linecap="round"/>
+    <circle cx="65" cy="56" r="3" fill="#69947c"/>
+    <rect x="87" y="10" width="49" height="38" rx="11" fill="#fff" stroke="#c4d9ca" stroke-width="1.2"/>
+    ${dnaMotif({cx:111.5,top:18,height:22,amplitude:5.5,turns:1,stroke:1.8,rungs:5})}
+    <rect x="87" y="64" width="49" height="38" rx="11" fill="#fff" stroke="#ddd4bd" stroke-width="1.2"/>
+    <g fill="none" stroke="#a38c63" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="102" y="74" width="20" height="18" rx="3"/><path d="M107 72v5m10-5v5m-15 4h20M107 85h2m5 0h2m-9 4h2"/></g>
+  </svg><span class="flow-number">03</span><h3>Szakmai tisztázás</h3><p>Magzati diagnosztika és gondozás: külön kérdések.</p></div>
   </div><div class="diagram-foot"><span>Sematikus magyarázat, nem diagnosztikai ábra.</span><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0308008" target="_blank" rel="noopener noreferrer">Szakmai háttér ${icon('chevron')}</a></div></figure>`;}
 
 export function ppvFigure(){

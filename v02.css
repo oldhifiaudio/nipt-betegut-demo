@@ -9,6 +9,11 @@
 body { background: #f5f7f3; }
 .sidebar { background: var(--navy-deep); }
 .sidebar .brand-mark { color: #88bcae; }
+.brand { gap: 11px; padding: 0 4px 32px; }
+.brand strong { font-size: 1.12rem; font-weight: 580; letter-spacing: -.025em; white-space: nowrap; line-height: 1.3; }
+.brand-acronym { font-size: .88em; font-weight: 750; letter-spacing: .035em; }
+.brand small { max-width: 126px; margin-top: 5px; font-size: .58rem; letter-spacing: .13em; line-height: 1.65; }
+.brand .brand-mark { width: 41px; height: 41px; }
 .brand small, .nav-label, .side-version { color: #b6cfc9; }
 .nav a { color: #ceded9; border-radius: 12px; }
 .nav a:hover { background: #214c50; }
@@ -254,6 +259,9 @@ body { background: #f5f7f3; }
   .ppv-label small { display: block; margin-top: 2px; }
 }
 @media (max-width: 900px) {
+  .brand { padding: 0; gap: 10px; }
+  .brand strong { font-size: 1.05rem; }
+  .brand .brand-mark { width: 36px; height: 36px; }
   .overview-hero { grid-template-columns: 1.1fr 1fr; }
   .hero-copy h2 { font-size: 2rem; }
   .hero-art-wrap .hero-art { max-width: 360px; }
@@ -285,6 +293,9 @@ body { background: #f5f7f3; }
   .patient-empty-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 620px) {
+  .brand { gap: 8px; }
+  .brand strong { font-size: 1rem; }
+  .brand small { font-size: .49rem; margin-top: 3px; max-width: 116px; }
   .main { padding-top: 23px; }
   .page-heading { margin-bottom: 22px; flex-direction: column; align-items: flex-start; gap: 16px; }
   .page-heading>.button { width: 100%; }
@@ -296,6 +307,8 @@ body { background: #f5f7f3; }
   .hero-actions .button { flex: 1 1 auto; }
   .hero-tags small { font-size: .65rem; }
   .hero-art-wrap .hero-art { max-height: 194px; width: 100%; }
+  .hero-chromosome-caption { display: none; }
+  .hero-chromosome-label { font-size: 19px; transform: translateY(7px); }
   .v02-stats { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; }
   .v02-stats .stat { padding: 13px 10px; border-radius: 12px; }
   .stat-top { margin-bottom: 10px; }
@@ -362,6 +375,8 @@ body { background: #f5f7f3; }
   .project-art { float: none; width: 100%; max-width: 300px; margin: 0 auto; }
 }
 @media (max-width: 380px) {
+  .brand strong { font-size: .9rem; }
+  .brand .brand-mark { width: 31px; height: 31px; }
   .overview-hero, .patient-hero { padding-inline: 18px; }
   .hero-copy h2, .patient-hero h1 { font-size: 1.75rem; }
   .hero-tags small { width: 100%; margin: 4px 0 0; }

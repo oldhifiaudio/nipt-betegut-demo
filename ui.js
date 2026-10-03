@@ -23,4 +23,25 @@ const paths={
   edit:'<path d="m14 5 5 5M4 20l5-1L21 7l-5-5L4 14z"/>',
 };
 export function icon(name){return `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]||paths.info}</svg>`;}
-export const mark=`<svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="11" fill="currentColor"/><path d="M13 8c0 12 14 12 14 24M27 8c0 12-14 12-14 24M14 11h12M16 17h8M16 23h8M14 29h12" stroke="white" stroke-width="2.2" stroke-linecap="round"/></svg>`;
+// A shared decorative motif keeps the logo and explanatory artwork consistent.
+export function dnaMotif({cx,top,height,amplitude,turns=1.5,stroke=3,rungs=13,front='#347b6c',back='#9ec3b4',bridge='#8eb6a6'}){
+  const point=(side,t)=>[cx+side*amplitude*Math.cos(t*Math.PI*2*turns),top+t*height];
+  const strand=(side,from=0,to=1)=>{
+    const steps=Math.round((to-from)*turns*64);
+    return Array.from({length:steps+1},(_,i)=>{
+      const [x,y]=point(side,from+(to-from)*i/steps);
+      return `${i?'L':'M'}${x.toFixed(2)} ${y.toFixed(2)}`;
+    }).join(' ');
+  };
+  const bridges=Array.from({length:rungs},(_,i)=>{
+    const t=(i+1)/(rungs+1),[a,y]=point(1,t),[b]=point(-1,t);
+    return Math.abs(a-b)<stroke*1.4?'':`<path d="M${a.toFixed(2)} ${y.toFixed(2)}H${b.toFixed(2)}"/>`;
+  }).join('');
+  const halves=turns*2;
+  return `<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="${back}" stroke-width="${stroke}"><path d="${strand(1)}"/><path d="${strand(-1)}"/></g>
+    <g stroke="${bridge}" stroke-width="${stroke*.42}">${bridges}</g>
+    <g stroke="${front}" stroke-width="${stroke}">${Array.from({length:halves},(_,i)=>`<path d="${strand(i%2?-1:1,i/halves,(i+1)/halves)}"/>`).join('')}</g>
+  </g>`;
+}
+export const mark=`<svg class="brand-mark" viewBox="0 0 48 48" fill="none" color="#88bcae" aria-hidden="true"><rect width="48" height="48" rx="15" fill="currentColor"/><rect x="1" y="1" width="46" height="46" rx="14" stroke="#fff" stroke-opacity=".17"/>${dnaMotif({cx:24,top:9,height:30,amplitude:8,turns:1,stroke:2.3,rungs:7,front:'#fff',back:'#d3e8dd',bridge:'#e9f4ec'})}</svg>`;

@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A NIPT Betegút 0.2 bemutató részletes használati útmutatója: orvosi és páciensnézet, mintaesetek, leletek, tervmegosztás és gyakorlópéldák.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#163c43">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>Használati útmutató · NIPT Betegút 0.2</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22brand-mark%22%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20color%3D%22%2388bcae%22%20aria-hidden%3D%22true%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%2215%22%20fill%3D%22currentColor%22%2F%3E%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2214%22%20stroke%3D%22%23fff%22%20stroke-opacity%3D%22.17%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%0A%20%20%20%20%3Cg%20stroke%3D%22%23d3e8dd%22%20stroke-width%3D%222.3%22%3E%3Cpath%20d%3D%22M32.00%209.00%20L31.96%209.47%20L31.85%209.94%20L31.66%2010.41%20L31.39%2010.88%20L31.06%2011.34%20L30.65%2011.81%20L30.18%2012.28%20L29.66%2012.75%20L29.08%2013.22%20L28.44%2013.69%20L27.77%2014.16%20L27.06%2014.63%20L26.32%2015.09%20L25.56%2015.56%20L24.78%2016.03%20L24.00%2016.50%20L23.22%2016.97%20L22.44%2017.44%20L21.68%2017.91%20L20.94%2018.38%20L20.23%2018.84%20L19.56%2019.31%20L18.92%2019.78%20L18.34%2020.25%20L17.82%2020.72%20L17.35%2021.19%20L16.94%2021.66%20L16.61%2022.13%20L16.34%2022.59%20L16.15%2023.06%20L16.04%2023.53%20L16.00%2024.00%20L16.04%2024.47%20L16.15%2024.94%20L16.34%2025.41%20L16.61%2025.88%20L16.94%2026.34%20L17.35%2026.81%20L17.82%2027.28%20L18.34%2027.75%20L18.92%2028.22%20L19.56%2028.69%20L20.23%2029.16%20L20.94%2029.63%20L21.68%2030.09%20L22.44%2030.56%20L23.22%2031.03%20L24.00%2031.50%20L24.78%2031.97%20L25.56%2032.44%20L26.32%2032.91%20L27.06%2033.38%20L27.77%2033.84%20L28.44%2034.31%20L29.08%2034.78%20L29.66%2035.25%20L30.18%2035.72%20L30.65%2036.19%20L31.06%2036.66%20L31.39%2037.13%20L31.66%2037.59%20L31.85%2038.06%20L31.96%2038.53%20L32.00%2039.00%22%2F%3E%3Cpath%20d%3D%22M16.00%209.00%20L16.04%209.47%20L16.15%209.94%20L16.34%2010.41%20L16.61%2010.88%20L16.94%2011.34%20L17.35%2011.81%20L17.82%2012.28%20L18.34%2012.75%20L18.92%2013.22%20L19.56%2013.69%20L20.23%2014.16%20L20.94%2014.63%20L21.68%2015.09%20L22.44%2015.56%20L23.22%2016.03%20L24.00%2016.50%20L24.78%2016.97%20L25.56%2017.44%20L26.32%2017.91%20L27.06%2018.38%20L27.77%2018.84%20L28.44%2019.31%20L29.08%2019.78%20L29.66%2020.25%20L30.18%2020.72%20L30.65%2021.19%20L31.06%2021.66%20L31.39%2022.13%20L31.66%2022.59%20L31.85%2023.06%20L31.96%2023.53%20L32.00%2024.00%20L31.96%2024.47%20L31.85%2024.94%20L31.66%2025.41%20L31.39%2025.88%20L31.06%2026.34%20L30.65%2026.81%20L30.18%2027.28%20L29.66%2027.75%20L29.08%2028.22%20L28.44%2028.69%20L27.77%2029.16%20L27.06%2029.63%20L26.32%2030.09%20L25.56%2030.56%20L24.78%2031.03%20L24.00%2031.50%20L23.22%2031.97%20L22.44%2032.44%20L21.68%2032.91%20L20.94%2033.38%20L20.23%2033.84%20L19.56%2034.31%20L18.92%2034.78%20L18.34%2035.25%20L17.82%2035.72%20L17.35%2036.19%20L16.94%2036.66%20L16.61%2037.13%20L16.34%2037.59%20L16.15%2038.06%20L16.04%2038.53%20L16.00%2039.00%22%2F%3E%3C%2Fg%3E%0A%20%20%20%20%3Cg%20stroke%3D%22%23e9f4ec%22%20stroke-width%3D%220.9659999999999999%22%3E%3Cpath%20d%3D%22M29.66%2012.75H18.34%22%2F%3E%3Cpath%20d%3D%22M18.34%2020.25H29.66%22%2F%3E%3Cpath%20d%3D%22M16.00%2024.00H32.00%22%2F%3E%3Cpath%20d%3D%22M18.34%2027.75H29.66%22%2F%3E%3Cpath%20d%3D%22M29.66%2035.25H18.34%22%2F%3E%3C%2Fg%3E%0A%20%20%20%20%3Cg%20stroke%3D%22%23fff%22%20stroke-width%3D%222.3%22%3E%3Cpath%20d%3D%22M32.00%209.00%20L31.96%209.47%20L31.85%209.94%20L31.66%2010.41%20L31.39%2010.88%20L31.06%2011.34%20L30.65%2011.81%20L30.18%2012.28%20L29.66%2012.75%20L29.08%2013.22%20L28.44%2013.69%20L27.77%2014.16%20L27.06%2014.63%20L26.32%2015.09%20L25.56%2015.56%20L24.78%2016.03%20L24.00%2016.50%20L23.22%2016.97%20L22.44%2017.44%20L21.68%2017.91%20L20.94%2018.38%20L20.23%2018.84%20L19.56%2019.31%20L18.92%2019.78%20L18.34%2020.25%20L17.82%2020.72%20L17.35%2021.19%20L16.94%2021.66%20L16.61%2022.13%20L16.34%2022.59%20L16.15%2023.06%20L16.04%2023.53%20L16.00%2024.00%22%2F%3E%3Cpath%20d%3D%22M32.00%2024.00%20L31.96%2024.47%20L31.85%2024.94%20L31.66%2025.41%20L31.39%2025.88%20L31.06%2026.34%20L30.65%2026.81%20L30.18%2027.28%20L29.66%2027.75%20L29.08%2028.22%20L28.44%2028.69%20L27.77%2029.16%20L27.06%2029.63%20L26.32%2030.09%20L25.56%2030.56%20L24.78%2031.03%20L24.00%2031.50%20L23.22%2031.97%20L22.44%2032.44%20L21.68%2032.91%20L20.94%2033.38%20L20.23%2033.84%20L19.56%2034.31%20L18.92%2034.78%20L18.34%2035.25%20L17.82%2035.72%20L17.35%2036.19%20L16.94%2036.66%20L16.61%2037.13%20L16.34%2037.59%20L16.15%2038.06%20L16.04%2038.53%20L16.00%2039.00%22%2F%3E%3C%2Fg%3E%0A%20%20%3C%2Fg%3E%3C%2Fsvg%3E">
+  <link rel="stylesheet" href="./utmutato.css">
+  <script type="module" src="./utmutato.js"></script>
+</head>
+<body id="eleje">
+<a class="skip-link" href="#tartalom">Ugrás az útmutatóhoz</a>
+<header class="guide-header">
+  <a class="guide-brand" href="./" target="_blank" rel="noopener noreferrer" aria-label="NIPT Betegút – új bemutatólap megnyitása"><span id="guide-brand-mark" aria-hidden="true"></span><span><strong>NIPT betegút</strong><small>HASZNÁLATI ÚTMUTATÓ</small></span></a>
+  <div class="guide-actions"><a class="button" href="./" target="_blank" rel="noopener noreferrer">Bemutató megnyitása ↗</a><button class="button primary" type="button" data-print-guide>Útmutató nyomtatása / PDF</button></div>
+</header>
+<div class="guide-layout">
+<aside class="guide-index">
+  <details id="guide-index-details" open>
+  <summary>Tartalomjegyzék</summary>
+  <nav aria-label="Az útmutató tartalomjegyzéke">
+    <ol>
+      <li><a href="#kezdes">Kezdés és gyors próba</a></li>
+      <li><a href="#tajekozodas">Nézetek és navigáció</a></li>
+      <li><a href="#mintak">A hat mintaeset</a></li>
+      <li><a href="#uj-eset">Új eset felvétele</a></li>
+      <li><a href="#orvosi">Az orvosi esetnézet</a></li>
+      <li><a href="#leletek">Leletek és helyesbítés</a></li>
+      <li><a href="#terv">Tervelfogadás és megosztás</a></li>
+      <li><a href="#kovetes">Teendők, dátumok, lezárás</a></li>
+      <li><a href="#paciens">A páciensnézet használata</a></li>
+      <li><a href="#tortenet">Korábbi változatok és napló</a></li>
+      <li><a href="#tudastar">Grafikonok és tudástár</a></li>
+      <li><a href="#gyakorlat">Teljes T15-ös gyakorlópélda</a></li>
+      <li><a href="#adatok">Mentés, megosztás, alaphelyzet</a></li>
+      <li><a href="#hibak">Gyakori kérdések és hibák</a></li>
+      <li><a href="#szotar">Fogalmak és bemutatási ellenőrzőlista</a></li>
+    </ol>
+  </nav>
+  </details>
+  <a class="back-top" href="#eleje">↑ Az oldal tetejére</a>
+</aside>
+<main id="tartalom">
+<div class="guide-cover">
+  <p class="eyebrow">NIPT Betegút · 0.2 bemutató</p>
+  <h1>Minden lépéshez<br><em>egy érthető útmutató.</em></h1>
+  <p class="lead">Az első megnyitástól a megosztott páciens-összefoglalóig. A gombnevek a magyar felület tényleges feliratait követik.</p>
+  <div class="guide-meta"><span>Frissítve: 2026. október 3.</span><span>Orvosi és páciensnézet</span><span>Asztali és mobilméret</span></div>
+</div>
+<div class="notice"><strong>Ez a bemutató használati útmutatója.</strong><p>Az alkalmazás mintaadatokkal működik; betegellátásra és személyes kockázat meghatározására nem használható. Az alábbi vizsgálati példák a szoftver működését mutatják, nem klinikai vizsgálatsorrendet írnak elő. Valódi nevet, elérhetőséget, azonosítót vagy betegleletet a szabad szöveges mezőkbe se írj.</p></div>
+<noscript><p>Az útmutató JavaScript nélkül is olvasható. Nyomtatáshoz használd a böngésző Nyomtatás menüpontját.</p></noscript>
+
+<section id="kezdes">
+  <p class="section-number">01 · Első lépések</p><h2>Kezdés és gyors próba</h2>
+  <p>Nyisd meg a <a href="https://nipt-betegut-demo.onrender.com/" target="_blank" rel="noopener noreferrer">nyilvános bemutatót</a> Chrome-ban vagy Safariban. Telepítésre és fiókra nincs szükség. Az oldal a magyar orvosi áttekintéssel és hat előkészített mintaesettel indul.</p>
+  <p>Ez az útmutató a bemutatóból külön böngészőlapon nyílik meg. Munka közben az eredeti bemutatólapra válts vissza. Az itt látható <b>Bemutató megnyitása</b> gomb egy új bemutatólapot nyit; nem viszi át automatikusan egy másik lap módosításait.</p>
+  <h3>Ötperces első próba</h3>
+  <ol class="steps">
+    <li>Az <b>Áttekintés</b> oldalon nyisd meg a <b>Mintaeset 01</b> sort. Az azonosítója <b>DEMO-001</b>, a jelzése <b>T16</b>.</li>
+    <li>Nézd meg a három elkülönített kérdést, a terhességi idővonalat és a <b>Jelenlegi döntési pont</b> kártyát. Az <b>Indoklás és forrás</b> felirattal nyithatod le a részleteket.</li>
+    <li>Kattints a <b>Páciensnézet</b> gombra. Ennél a mintánál már van megosztott terv, ezért azonnal látható az összefoglaló és a következő teendő.</li>
+    <li>Nyisd le a magyarázó kérdéseket. Próbáld ki a <b>Nyomtatás / PDF</b> gombot; a nyomtatási ablakból mentés nélkül is visszaléphetsz.</li>
+    <li>Válts vissza az <b>Orvosi</b> nézetre. A <b>Változatok és napló</b> fülön nézd meg a megőrzött tervet és értékelést.</li>
+  </ol>
+  <p class="tip">Ha a létrehozástól az új leletig szeretnéd végigpróbálni a folyamatot, ugorj a <a href="#gyakorlat">teljes T15-ös gyakorlópéldához</a>.</p>
+</section>
+
+<section id="tajekozodas">
+  <p class="section-number">02 · Tájékozódás</p><h2>Nézetek és navigáció</h2>
+  <div class="table-scroll" role="region" aria-label="Fő navigáció" tabindex="0"><table><thead><tr><th>Hely</th><th>Mire használható?</th></tr></thead><tbody>
+    <tr><td><b>Áttekintés</b> · négyzetrács ikon</td><td>A mintaesetek, a megosztott tervek és a munkafolyamat összefoglalója.</td></tr>
+    <tr><td><b>Esetek</b> · táska ikon</td><td>A teljes esetlista, a <b>Mind</b>, <b>Folyamatban</b> és <b>Lezárt</b> szűrőkkel.</td></tr>
+    <tr><td><b>Tudástár</b> · könyv ikon</td><td>Kutatási grafikonok, magyarázó ábrák, kromoszóma szerinti ismertetők és források.</td></tr>
+    <tr><td><b>A projektről</b> · dokumentum ikon</td><td>A bemutató célja, kipróbálható funkciói és a későbbi fejlesztés feltételei.</td></tr>
+    <tr><td><b>Orvosi / Páciens</b> kapcsoló</td><td>Az éppen kiválasztott eset két megjelenítése közötti váltás. Ez nézetváltás, nem bejelentkezés.</td></tr>
+    <tr><td><b>NIPT betegút</b> márkajel</td><td>Visszatérés az áttekintéshez.</td></tr>
+  </tbody></table></div>
+  <p>Asztali nézetben a főmenü bal oldalon található. Keskeny képernyőn felül jelenik meg, és a menüpontokból csak az ikonok látszhatnak. Az esetrészlet és a páciensnézet kártyái mobilon egymás alá rendeződnek; a további tartalomhoz görgess lefelé.</p>
+  <p>Az eset neve és a sor végén lévő nyíl is megnyitja az esetet. A párbeszédablakot a <b>Bezárás</b>, a <b>Mégse</b> vagy az <kbd>Esc</kbd> billentyű zárja. Az űrlap kitöltése önmagában nem mentés: ehhez az ablak alján található műveleti gombot kell megnyomni.</p>
+</section>
+
+<section id="mintak">
+  <p class="section-number">03 · Kiinduló példák</p><h2>A hat mintaeset</h2>
+  <p>Az alábbi állapotok az eredeti bemutatóra, <b>2026. október 3-i demódátumra</b> vonatkoznak. A saját módosításaid után eltérhetnek.</p>
+  <div class="table-scroll" role="region" aria-label="A hat kiinduló mintaeset" tabindex="0"><table><thead><tr><th>Eset</th><th>Kiindulás</th><th>Mit érdemes kipróbálni?</th></tr></thead><tbody>
+    <tr><td><b>01 · DEMO-001</b><br>T16 · 18+2 hét</td><td>Célzott magzatvíz-lelet és már megosztott bemutatóterv.</td><td>Páciensnézet, idővonal, teendő, PDF.</td></tr>
+    <tr><td><b>02 · DEMO-002</b><br>T15 · 17+4 hét</td><td>A rögzített magzatvíz-leletben a célzott eltérés nem szerepel; a demóban külön UPD-kérdés marad.</td><td>Tervelfogadás, megosztás, új mintalelet és tervfrissítés.</td></tr>
+    <tr><td><b>03 · DEMO-003</b><br>T7 · 13+1 hét</td><td>Ultrahangos mintalelet, genetikai tisztázás előtt.</td><td>A szűrés, a különböző lelettípusok és az időzítési referencia megkülönböztetése.</td></tr>
+    <tr><td><b>04 · DEMO-004</b><br>T22 · 16+3 hét</td><td>A megerősítő mintaleletben eltérés szerepel.</td><td>A szakmai megbeszéléshez kapcsolódó bemutatóág.</td></tr>
+    <tr><td><b>05 · DEMO-005</b><br>T8 · 14+5 hét</td><td>Ikerterhesség és a négy kezdő kromoszómán kívüli jelzés.</td><td>A <b>Hatókörön kívül</b> állapot.</td></tr>
+    <tr><td><b>06 · DEMO-006</b><br>T16 · 39+2 hét</td><td>Lezárt eset, megőrzött tervvel és előzményekkel.</td><td>A lezárás utáni, csak megtekinthető tartalom.</td></tr>
+  </tbody></table></div>
+  <p>A kezdő betegutak T7, T15, T16 és T22 jelzésekre, egyes terhességben készültek. Más eltérés, ikerterhesség vagy összetett lelet esetén a bemutató külön szakmai áttekintést jelez.</p>
+</section>
+
+<section id="uj-eset">
+  <p class="section-number">04 · Orvosi nézet</p><h2>Új eset felvétele</h2>
+  <p>Az <b>Áttekintés</b> vagy <b>Esetek</b> oldalon kattints az <b>Új mintaeset</b> gombra.</p>
+  <ol class="steps">
+    <li>Válaszd ki a <b>NIPT által jelzett kromoszómát</b>. A menü külön jelzi a négy kezdő betegutat és a többi, külön felülvizsgálatot igénylő választást.</li>
+    <li>Add meg a <b>Terhességi hét</b> és <b>További napok</b> értékét. A 17+4 jelentése: 17 hét és 4 nap. A nap mezőben 0–6 adható meg.</li>
+    <li>A <b>terhességi kor viszonyítási napja</b> azt jelenti, melyik dátumon igaz a beírt hét és nap. A demó későbbi napokra ebből számolja a kort.</li>
+    <li>Ellenőrizd a <b>NIPT-lelet dátumát</b>, a <b>Lelet típusát</b>, a <b>Terhesség típusát</b> és az <b>Eltűnő iker előzményét</b>.</li>
+    <li>Válassz a bemutatóban elérhető <b>módszer</b> és <b>labor</b> értékek közül. A <b>Nem ismert</b> választás adatpontosítási állapotot szemléltet; nem negatív eredményt jelent.</li>
+    <li>Jelöld be a <b>Megerősítem, hogy mintaesetet rögzítek.</b> mezőt, majd kattints a <b>Bemutatóeset létrehozása</b> gombra.</li>
+  </ol>
+  <p>A név és a <b>DEMO-…</b> azonosító automatikusan készül. Nincs személyes névmező vagy leletfájl-feltöltés. Létrehozás után megnyílik az új eset orvosi nézete.</p>
+  <div class="tip"><strong>Dátumellenőrzés:</strong> a lelet és a viszonyítás napja nem lehet későbbi a bemutató napjánál. A leletdátumnak a rögzített bemutatóterhesség időszakába kell esnie. Hiba esetén az űrlap jelzi, mit kell javítani.</div>
+</section>
+
+<section id="orvosi">
+  <p class="section-number">05 · Az eset áttekintése</p><h2>Az orvosi esetnézet</h2>
+  <p>A felső rész az eset nevét, azonosítóját, kromoszómajelzését és a demónapra számolt terhességi kort mutatja. Lezárt esetnél a lezárás napjához tartozó kor marad látható.</p>
+  <h3>Három fül, három feladat</h3>
+  <ul><li><b>Betegút és terv:</b> az aktuális döntési pont, a bemutató lépései, elfogadott terv és teendők.</li><li><b>Leletek:</b> a rögzített mintaleletek, eredmények és helyesbítések.</li><li><b>Változatok és napló:</b> korábbi tervek, értékelések és műveletek.</li></ul>
+  <p>A betegút térképe az aktuális <b>döntési szakaszt</b> jelöli. Nem azt mutatja, hogy minden korábbi vizsgálat biztosan megtörtént. A három színezett összefoglaló külön kezeli a szűrőjelzést, a magzati tisztázást és a lepényi eredet kérdését.</p>
+  <p>A <b>Jelenlegi döntési pont</b> kártyán a lépés címe és időzítési megjegyzése közvetlenül látható. Az <b>Indoklás és forrás</b> részt kattintással nyithatod le. A hivatkozás új böngészőlapon nyílik meg.</p>
+  <p>A <b>Pontosításra váró adatok</b> üzenet jelzi a hiányzó adatokat. Az oldalsó <b>Esetadatok</b> kártya és az idővonal segít ellenőrizni a bevitt állapotot. A megjelenő 15+0 hetes időzítési referencia nem automatikus vizsgálati előírás.</p>
+</section>
+
+<section id="leletek">
+  <p class="section-number">06 · Adatrögzítés</p><h2>Leletek rögzítése és helyesbítése</h2>
+  <p>Nyitott esetben használd a <b>Lelet hozzáadása</b> gombot, vagy a <b>Leletek</b> fülön az <b>Új lelet</b> gombot.</p>
+  <div class="table-scroll" role="region" aria-label="Leletrögzítési mezők" tabindex="0"><table><thead><tr><th>Mező</th><th>Mire figyelj?</th></tr></thead><tbody>
+    <tr><td><b>Vizsgálat típusa</b></td><td>Genetikai vizsgálat, Ultrahang, UPD / metiláció vagy Növekedési vizsgálat.</td></tr>
+    <tr><td><b>Vizsgálat / mintavétel napja</b></td><td>Legfeljebb a bemutató napja lehet; az adott eset időszakán belül.</td></tr>
+    <tr><td><b>Minta típusa</b></td><td>A rögzíteni kívánt mintalelethez illő választás. A „Nem ismert” érték külön bizonytalanságot jelez.</td></tr>
+    <tr><td><b>Vizsgálati módszer</b></td><td>A típussal együtt értelmezendő. Típusváltáskor a demó átállítja a módszer és a minta alapértékét; mentés előtt ellenőrizd ezeket.</td></tr>
+    <tr><td><b>Rögzített eredmény</b></td><td>A vizsgált eltérés nem szerepel; Eltérés szerepel; Folyamatban; Nem egyértelmű.</td></tr>
+    <tr><td><b>Célzott lefedettség jelölőnégyzete</b></td><td>Azt rögzíti, hogy a mintalelet kifejezetten lefedi-e a jelzett eltérést vagy a célzott UPD-kérdést. Nem helyettesíti a módszer és minta kiválasztását.</td></tr>
+    <tr><td><b>Bemutatómegjegyzés</b></td><td>Opcionális, személyes adat nélküli mintaszöveg.</td></tr>
+  </tbody></table></div>
+  <p>Kattints a <b>Lelet rögzítése</b> gombra. Az orvosi értékelés frissül; a korábban megosztott páciens-összefoglaló ettől még nem cserélődik le.</p>
+  <h3>Ha egy már rögzített leletet javítasz</h3>
+  <ol class="steps"><li>A <b>Leletek</b> fülön keresd meg az érintett, aktív leletet, és válaszd a <b>Helyesbítés</b> gombot.</li><li>Javítsd a mezőket, és töltsd ki <b>A helyesbítés indoka</b> mezőt.</li><li>Kattints a <b>Helyesbítés rögzítése</b> gombra.</li></ol>
+  <p>A korábbi lelet megmarad, és <b>Új lelet helyesbítette</b> jelölést kap. Az értékelés a helyesbített állapotot használja. A helyesbítés azonos vizsgálattípuson belül működik; más típusú vizsgálatot új leletként rögzíts.</p>
+  <p class="tip">Ha véletlenül másik esetbe rögzítettél egy leletet, a demóban nincs külön lelettörlés vagy esetek közötti áthelyezés. Újraindításhoz a <a href="#adatok">saját bemutató alaphelyzete</a> használható, amely az összes saját módosítást lecseréli.</p>
+</section>
+
+<section id="terv">
+  <p class="section-number">07 · A két kulcslépés</p><h2>Tervelfogadás és páciensnézeti megosztás</h2>
+  <div class="flow" aria-label="A megosztás folyamata"><span><b>1</b> Áttekintés</span><i aria-hidden="true">→</i><span><b>2</b> Elfogadás</span><i aria-hidden="true">→</i><span><b>3</b> Megosztás</span></div>
+  <p><strong>A terv elfogadása és megosztása két külön művelet.</strong> Az elfogadás után még külön meg kell nyomni a megosztás gombját ahhoz, hogy az új változat a páciensnézetben jelenjen meg.</p>
+  <ol class="steps">
+    <li>A <b>Betegút és terv</b> fülön kattints a <b>Terv áttekintése</b> gombra.</li>
+    <li>Olvasd el és szükség esetén módosítsd a <b>Páciensnek szánt összefoglalót</b>.</li>
+    <li>Ellenőrizd a <b>Megbeszélt teendőt</b> és a választott dátumot. A demó alapértelmezésben a bemutató napját követő hetedik napot kínálja fel; ez nem klinikai ajánlás.</li>
+    <li>Ha eltérő teendőt választasz, jelöld az <b>Eltérő lépést választok…</b> mezőt, és írj indoklást. A teendő címének átírása ezt automatikusan is bekapcsolja.</li>
+    <li>Jelöld be a bemutatóterv elfogadásáról szóló megerősítést, majd kattints a <b>Bemutatóterv elfogadása</b> gombra.</li>
+    <li>Az új <b>Elfogadott bemutatóterv</b> kártyán kattints a <b>Megosztás a páciensnézetben</b> gombra.</li>
+    <li>A <b>Páciensnézetben megosztva</b> felirat jelzi a sikert. A <b>Páciensnézet</b> gombbal ellenőrizheted az eredményt.</li>
+  </ol>
+  <p>A jelenlegi űrlapon tervenként <b>egy megbeszélt teendő</b> rögzíthető. Több tervváltozat készülhet. Egy új terv elfogadása után a korábbi páciensnézet felülvizsgálatra várhat; az új változat csak megosztás után lép a helyére.</p>
+  <h3>Új lelet vagy adatpontosítás után</h3>
+  <p>Az orvosi oldal az új adatok szerinti értékelést mutatja. A páciensoldal megőrzi a korábban megosztott szöveget és ábrákat, és <b>felülvizsgálati jelzést</b> ad. Az új állapot megosztásához ismételd meg az áttekintés → elfogadás → megosztás lépéseit.</p>
+  <p>A már megosztott terv gombja inaktív. Ha egy korábbi terv elavult, annak megosztási gombja nem jelenik meg; előbb új, aktuális tervet kell elfogadni.</p>
+</section>
+
+<section id="kovetes">
+  <p class="section-number">08 · A követés kezelése</p><h2>Teendők, dátumok és esetlezárás</h2>
+  <h3>Teendő teljesítése</h3>
+  <p>Az orvosi oldalon a <b>Megbeszélt teendők</b> kártya nyitott feladatánál kattints a <b>Teljesítve</b> gombra. Ez a feladat teljesítését rögzíti, nem jelent vizsgálati eredményt. Ha leletet is szeretnél kipróbálni, azt külön kell rögzíteni.</p>
+  <p>Ha a határnap korábbi a bemutató napjánál, a nyitott teendőnél az <b>Egyeztetendő, a dátum elmúlt</b> szöveg jelenik meg. A rendszer nem küld e-mailt, telefonos értesítést vagy időpontfoglalást.</p>
+  <h3>A terhességi kor pontosítása</h3>
+  <p>Az <b>Esetadatok</b> kártya ceruzaikonja nyitja a <b>Terhességi kor pontosítása</b> ablakot. Add meg a hetet, napot, a viszonyítási napot és az indokot; majd válaszd a <b>Pontosítás rögzítése</b> gombot. Az új adatváltozat megmarad a naplóban.</p>
+  <h3>Más esetadatok pontosítása</h3>
+  <p>A <b>Leletadatok pontosítása</b> gombbal a terhesség típusa, az eltűnő iker előzménye, a labor és a módszer módosítható, indoklással. A kezdeti kromoszómajelzés és lelettípus ezen az űrlapon nem szerkeszthető; ilyen más kiindulás kipróbálásához hozz létre új mintaesetet.</p>
+  <h3>A bemutató napjának módosítása</h3>
+  <p>Az áttekintő esetlista alján, a <b>Bemutató dátuma</b> mellett kattints a <b>Módosítás</b> gombra. A <b>Demódátum beállítása</b> az egész bemutatólap dátumát módosítja, nem csak egy esetét. Emiatt változhatnak a korok, a lejárt teendők és az aktuálisnak tekintett tervek. A megosztott pillanatképek saját dátuma megmarad.</p>
+  <h3>Eset lezárása</h3>
+  <ol class="steps"><li>Nyitott esetnél válaszd az <b>Eset lezárása</b> gombot.</li><li>Add meg a lezárás módját és a lezáró megjegyzést.</li><li>Kattints a <b>Bemutatóeset lezárása</b> gombra.</li></ol>
+  <p>A nyitott teendők lezáródnak, a leletek és a korábbi terv megmaradnak. A lezárt eset többé nem szerkeszthető ezen a felületen, és nincs külön újranyitó gomb. Új próba új mintaesettel vagy a saját demó alaphelyzetbe állításával kezdhető.</p>
+</section>
+
+<section id="paciens">
+  <p class="section-number">09 · Páciensnézet</p><h2>Mit látsz a páciensoldalon?</h2>
+  <p>A felső <b>Bemutatóeset</b> választóval válthatsz a minták között. A nézet az adott eset megosztott tervéhez igazodik.</p>
+  <ul><li><b>Amit eddig tudunk:</b> a megosztott állapot érthető leírása és az elfogadott összefoglaló.</li><li><b>A betegút térképe:</b> a megosztott terv döntési szakasza.</li><li><b>Terhességi idővonal:</b> a megosztáskor rögzített kor, a hozzá tartozó dátummal. Ez nem automatikusan a mai terhességi kor.</li><li><b>Következő megbeszélt teendő:</b> a nyitott feladat és dátuma. Mobilon ez a kártya az összefoglaló elé kerülhet.</li><li><b>A vizsgálat logikája</b> és a lenyitható kérdések: a bemutató magyarázó tartalmai.</li><li><b>Kihez fordulhatok?</b> A bemutató itt csak a jövőbeli elérhetőségi funkció helyét szemlélteti; tényleges kapcsolattartó vagy üzenetküldés nincs.</li></ul>
+  <p><b>Ha még nincs megosztott terv:</b> erről külön tájékoztatás jelenik meg. A páciensoldal nem állít össze magától összefoglalót az új adatokból. Az orvosi nézetben kell előbb elfogadni és megosztani a tervet.</p>
+  <p><b>Ha a terv felülvizsgálatra vár:</b> a látható szöveg és az ábra a korábbi megosztott változatot őrzi. Ez a bemutató egyik lényeges működése, nem frissítési hiba.</p>
+  <h3>Páciens-összefoglaló nyomtatása vagy PDF-mentése</h3>
+  <ol class="steps"><li>Megosztott terv mellett kattints a <b>Nyomtatás / PDF</b> gombra.</li><li>A böngésző nyomtatási ablakában válassz PDF-mentést. Chrome-ban jellemzően a célok között találod a <b>Mentés PDF-ként</b> lehetőséget; macOS Safariban a <b>PDF</b> menü használható. A pontos felirat a rendszer nyelvétől függhet.</li><li>Mentés előtt nézd meg az előnézetet. A dokumentum tartalmazza a tervváltozatot, a megosztáskori adatokat, a teendőket és a bemutató jelölését.</li></ol>
+  <p>Ez az összefoglaló a megosztott változatból készül. Az útmutató tetején lévő <b>Útmutató nyomtatása / PDF</b> ettől külön, ezt a teljes kézikönyvet nyomtatja.</p>
+</section>
+
+<section id="tortenet">
+  <p class="section-number">10 · Visszakereshetőség</p><h2>Korábbi változatok és napló</h2>
+  <p>Nyisd meg az eset <b>Változatok és napló</b> fülét.</p>
+  <ul><li><b>Elfogadott tervváltozatok → Terv megnyitása:</b> megtekinthető a korábbi összefoglaló, teendő, dátum és eltérésindok. A jelölés mutatja, hogy jelenlegi, korábban megosztott vagy még nem megosztott változatról van-e szó.</li><li><b>Korábbi értékelések → Megtekintés:</b> a megőrzött bemenettel és szabálycsomaggal újra lefut az akkori értékelés. A bemeneti adatok külön lenyithatók.</li><li><b>Műveleti napló:</b> az esethez tartozó létrehozás, leletrögzítés, pontosítás, elfogadás, megosztás és lezárás időrendje.</li></ul>
+  <p>A régi változat megnyitása nem állítja vissza az esetet, és nem osztja meg újra a tervet. A bemutató naplója a működés szemléltetésére szolgál; nem hiteles egészségügyi nyilvántartás.</p>
+</section>
+
+<section id="tudastar">
+  <p class="section-number">11 · Ábrák és források</p><h2>Grafikonok és tudástár</h2>
+  <h3>Az áttekintő oldalon</h3>
+  <p>A számlálók a bemutatóban ténylegesen szereplő esetekből készülnek. A <b>Páciensnek megosztva</b> az aktuális, megosztott tervvel rendelkező nyitott eseteket számolja. Az <b>Áttekintésre vár</b> azt jelzi, hogy új tervre, megosztásra vagy felülvizsgálatra van szükség; nem klinikai súlyossági pontszám.</p>
+  <p>A <b>Hol tartanak az esetek?</b> kördiagram munkafolyamat szerinti megoszlás. A teljes bemutatóállományt mutatja akkor is, ha az esetlistát közben leszűrted. Nem betegség- vagy szövődménygyakoriság.</p>
+  <h3>A tudástárban</h3>
+  <p>A PPV-ábrán a két kutatási végpont külön szerepel. A pont az összesített becslést, a sáv a konfidenciaintervallumot jelöli. A grafikon részletezett skálát használ, és a kutatások bizonytalanságára is felhívja a figyelmet. Az értékek nem adhatók össze, és nem az éppen kiválasztott mintaeset személyes kockázatai.</p>
+  <p>A T7, T15, T16 és T22 kártyák rövid ismertetőt nyitnak. Az egyes forrásoknál a <b>Korlátok és ellenőrzési állapot</b> rész lenyitható, az <b>Eredeti forrás</b> gomb a közleményt vagy szakmai dokumentumot nyitja meg. A kutatási közlemény, a szakmai ajánlás és a helyi, még jóváhagyásra váró döntési tábla nem azonos.</p>
+</section>
+
+<section id="gyakorlat">
+  <p class="section-number">12 · Végigkattintható példa</p><h2>T15: az első tervtől a frissített páciensnézetig</h2>
+  <p>Az alábbi próba az eredeti <b>Mintaeset 02 / DEMO-002</b> állapotból indul. Ha már módosítottad, előbb állítsd alaphelyzetbe a saját demót; ez a többi saját módosítást is lecseréli.</p>
+  <div class="notice compact"><strong>Csak szoftveres gyakorlópélda.</strong> A következő mezőértékek a bemutató állapotváltását teszik reprodukálhatóvá. Nem választanak valódi páciens számára vizsgálatot, mintát vagy módszert.</div>
+  <h3>A · Oszd meg az első tervet</h3>
+  <ol class="steps"><li>Az esetlistából nyisd meg a <b>Mintaeset 02</b> sort, vagy a főoldalon válaszd a <b>Betegút megnyitása</b> gombot.</li><li>Kattints a <b>Terv áttekintése</b> gombra. Az első próbánál hagyd meg a felkínált összefoglalót, teendőt és dátumot.</li><li>Jelöld a megerősítést, majd válaszd a <b>Bemutatóterv elfogadása</b> gombot.</li><li>Kattints a <b>Megosztás a páciensnézetben</b> gombra, majd nyisd meg a <b>Páciensnézetet</b>.</li></ol>
+  <p class="expected"><b>Ezt kell látnod:</b> az első megosztott tervet, a külön UPD-kérdést tartalmazó összefoglalót és 17+4 hetes megosztáskori idővonalat.</p>
+  <h3>B · Rögzíts egy új UPD-mintaleletet</h3>
+  <p>Válts vissza az <b>Orvosi</b> nézetre, és nyisd meg a <b>Lelet hozzáadása</b> ablakot. A mintapéldában állítsd be:</p>
+  <dl class="example-fields"><dt>Vizsgálat típusa</dt><dd>UPD / metiláció</dd><dt>Vizsgálat / mintavétel napja</dt><dd>2026. október 3.</dd><dt>Minta típusa</dt><dd>Magzatvíz</dd><dt>Vizsgálati módszer</dt><dd>Célzott UPD-vizsgálat</dd><dt>Rögzített eredmény</dt><dd>A vizsgált eltérés nem szerepel</dd><dt>Célzott lefedettség</dt><dd>A jelölőnégyzet legyen bejelölve.</dd><dt>Bemutatómegjegyzés</dt><dd>Például: „A gyakorlópélda új mintalelete.”</dd></dl>
+  <p>Kattints a <b>Lelet rögzítése</b> gombra.</p>
+  <p class="expected"><b>Ezt kell látnod:</b> az orvosi döntési pont <b>Gondozási terv egyeztetése</b> állapotra vált. A páciensnézet még az első megosztott tervet mutatja, felülvizsgálati jelzéssel.</p>
+  <h3>C · Készíts és ossz meg új változatot</h3>
+  <ol class="steps"><li>Az orvosi oldalon ismét válaszd a <b>Terv áttekintése</b> gombot.</li><li>Ellenőrizd az új összefoglalót és teendőt, majd fogadd el a tervet.</li><li>Oszd meg külön a páciensnézetben.</li><li>Nézd meg a páciensoldalt, majd a <b>Változatok és napló</b> fület.</li></ol>
+  <p class="expected"><b>Ezt kell látnod:</b> a páciens a második megosztott változatot látja. Az első terv és a korábbi értékelés továbbra is visszanézhető.</p>
+  <h3>D · Próbáld ki a befejezést</h3>
+  <p>Jelöld a nyitott teendőt <b>Teljesítve</b> állapotúnak, majd az <b>Eset lezárása</b> gombbal zárd le a mintát. A korábbi összefoglaló és a napló megmarad. Az újabb gyakorlást másik mintával vagy alaphelyzetbe állítással kezdheted.</p>
+</section>
+
+<section id="adatok">
+  <p class="section-number">13 · Saját bemutatópéldány</p><h2>Mentés, linkmegosztás és alaphelyzet</h2>
+  <p>A műveleti gombbal rögzített változások az adott böngészőlap munkamenetében tárolódnak. Nincs központi esetadatbázis, felhasználói fiók vagy több eszköz közötti szinkronizálás. A kiszolgáló szokásos technikai naplói ettől külön működhetnek.</p>
+  <ul><li><b>Oldalfrissítés:</b> ugyanazon a lapon a módosítások általában megmaradnak. Ha a böngésző munkameneti tárolása tiltott vagy megtelt, frissítéskor elveszhetnek. A sikeres műveleti üzenet nem jelent tartós mentést.</li><li><b>Lapbezárás:</b> ne tekintsd tartós mentésnek a böngésző állapotát. A megosztott összefoglalót szükség esetén előbb mentsd PDF-be.</li><li><b>Demólink másolása:</b> a bemutató főcímét másolja a vágólapra, esetadatok nélkül. Másik látogató az eredeti mintaesetekkel indul.</li><li><b>Saját eset címe:</b> egy saját létrehozású eset címének továbbküldése nem adja át az eset tartalmát. Másik böngészőben az eset nem feltétlenül található meg.</li></ul>
+  <h3>Újrakezdés</h3>
+  <p>A <b>Demó alaphelyzet</b> vagy <b>Saját demó alaphelyzet</b> gomb megnyit egy megerősítő ablakot. Az <b>Alaphelyzet visszaállítása</b> a saját módosításaid helyére az eredeti hat mintát teszi, és a demódátumot is visszaállítja. Más látogatók bemutatóját nem érinti. Ez az útmutató külön lapon marad nyitva.</p>
+  <p class="tip">A <b>Megosztás a páciensnézetben</b> ugyanazon a bemutatólapon kapcsolja át a páciensoldal tartalmát. A <b>Demólink másolása</b> ezzel szemben az alkalmazás címét adja tovább. A két művelet nem helyettesíti egymást.</p>
+</section>
+
+<section id="hibak">
+  <p class="section-number">14 · Segítség használat közben</p><h2>Gyakori kérdések és hibák</h2>
+  <div class="qa"><h3>Nem jelent meg az új terv a páciensoldalon.</h3><p>Ellenőrizd, hogy az elfogadás után a <b>Megosztás a páciensnézetben</b> gombot is megnyomtad-e. Nézd meg azt is, hogy ugyanazt a mintaesetet és ugyanazt a bemutatólapot használod-e.</p></div>
+  <div class="qa"><h3>Miért maradt a régi terhességi kor a páciens idővonalán?</h3><p>Az ábra a megosztott pillanatkép korát és dátumát őrzi. Dátumpontosítás vagy új lelet után új terv elfogadásával és megosztásával lehet frissíteni.</p></div>
+  <div class="qa"><h3>Azt írja: „A módszer és a mintatípus nem illik a vizsgálathoz.”</h3><p>Ellenőrizd együtt a vizsgálattípust, a mintát és a módszert. Ultrahang és növekedési vizsgálat esetén a demó a <b>Nem mintavételes vizsgálat</b> és <b>Klinikai / ultrahangos vizsgálat</b> választást használja. Típusváltás után nézd át az automatikusan módosult mezőket.</p></div>
+  <div class="qa"><h3>A lelet vagy teendő dátumát nem fogadja el.</h3><p>A rögzített lelet legfeljebb a demónapra eshet, a választott teendő pedig nem lehet annál korábbi. A leletnek az adott bemutatóterhesség időszakába kell esnie. Ellenőrizd a bemutató dátumát és a terhességi kor viszonyítási napját is.</p></div>
+  <div class="qa"><h3>Átírtam a teendőt, de nem menthető a terv.</h3><p>Az eltérő teendőhöz indoklás kell. Töltsd ki az <b>Eltérés indoka</b> mezőt, és ellenőrizd a kötelező megerősítést. Az űrlap a hiányzó vagy túl rövid szöveget is jelzi.</p></div>
+  <div class="qa"><h3>Nem kínál következő vizsgálatot.</h3><p>Lehet, hogy adatpontosítás vagy külön szakmai áttekintés szükséges, illetve a példa a négy kezdő betegúton kívül esik. A <b>Hatókörön kívül</b> jelölés a bemutató korlátját mutatja.</p></div>
+  <div class="qa"><h3>Nincs PDF-gomb vagy üres a páciensnézet.</h3><p>A páciens-összefoglaló csak megosztott terv mellett nyomtatható. Próbáld ki az eredeti <b>Mintaeset 01</b> példát, vagy előbb fogadj el és ossz meg egy tervet.</p></div>
+  <div class="qa"><h3>A lezárt esetet nem tudom módosítani.</h3><p>Ez a lezárt állapot működése. A történet megtekinthető, de új adat nem rögzíthető. Új mintaesettel vagy a saját demó alaphelyzetével folytathatod.</p></div>
+  <div class="qa"><h3>Nem működik a linkmásolás.</h3><p>Ha a böngésző nem engedi a vágólap elérését, a demó külön ablakban mutatja a kimásolható címet. A címsorból a <b>https://nipt-betegut-demo.onrender.com/</b> címet is továbbadhatod.</p></div>
+  <div class="qa"><h3>Nem reagálnak a gombok, vagy régi felületet látok.</h3><p>Várd meg az oldal betöltését, majd frissítsd a lapot. A kattintható alkalmazáshoz JavaScript szükséges. Ha a böngésző jelzi, hogy a módosításokat nem tudja megőrizni, frissítés előtt gondolj a menteni kívánt összefoglalóra. Tartós gond esetén próbálj új böngészőlapot; az új próba az alapmintákkal indulhat.</p></div>
+</section>
+
+<section id="szotar">
+  <p class="section-number">15 · Rövid referencia</p><h2>Fogalmak és bemutatási ellenőrzőlista</h2>
+  <dl class="glossary"><dt>Mintaeset</dt><dd>A működés kipróbálására készített, személyes adatot nem tartalmazó eset.</dd><dt>Demódátum</dt><dd>A bemutató saját viszonyítási napja. Eltérhet a számítógép mai dátumától.</dd><dt>Célzott lefedettség</dt><dd>Annak külön rögzítése, hogy a mintalelet melyik kérdést vizsgálta.</dd><dt>Elfogadott terv</dt><dd>Az orvosi nézetben rögzített változat; még nem feltétlenül látszik a páciensnél.</dd><dt>Megosztott terv / pillanatkép</dt><dd>A páciensnézethez kiválasztott, megőrzött tervváltozat, a hozzá tartozó akkori adatokkal.</dd><dt>Felülvizsgálatra vár</dt><dd>A jelenlegi esetállapot és a megosztott terv már nem teljesen ugyanahhoz az adat- vagy dátumváltozathoz tartozik.</dd><dt>UPD / metiláció</dt><dd>A demóban külön rögzíthető vizsgálattípus; nem zárul le automatikusan egy más típusú lelet rögzítésével.</dd><dt>Lepényi eredet</dt><dd>Külön állapot az esetadatok között. A demó ezt nem állapítja meg automatikusan a magzati mintaleletből.</dd><dt>PPV és konfidenciaintervallum</dt><dd>A tudástár kutatási becslésének és bizonytalanságának jelölései. A bemutató nem számol belőlük egyéni betegségi valószínűséget.</dd><dt>Szabályverzió</dt><dd>Az értékeléshez használt bemutató-szabálycsomag azonosítója. A 0.2-es felületben a klinikailag még nem jóváhagyott 0.1.0-demo csomag szerepel.</dd></dl>
+  <h3>Rövid közös bemutatás a szakmai vezetővel</h3>
+  <ul class="checklist"><li>Mutassátok meg az áttekintést és a hat induló példát.</li><li>Nyissátok meg a T16-os, már megosztott páciensnézetet.</li><li>Próbáljátok végig a T15-ös tervelfogadást és új leletet.</li><li>Hasonlítsátok össze az aktuális orvosi állapotot a megőrzött páciensváltozattal.</li><li>Nézzétek meg a korábbi tervet, a naplót és a PDF-et.</li><li>Próbáljátok ki a hiányzó adat és a hatókörön kívüli példa megjelenítését.</li><li>A visszajelzéshez írjátok fel az eset azonosítóját, a nézetet, az utolsó műveletet és a várt működést. Valódi betegadatot ne mellékeljetek.</li></ul>
+  <p>A következő, orvosokkal ellenőrzött pilotfejlesztés csak külön tulajdonosi jóváhagyással indulhat. A jelen útmutató és a bemutató ezt az egyeztetést támogatja.</p>
+</section>
+<footer class="guide-footer"><strong>NIPT Betegút · Használati útmutató · 0.2</strong><p>Nyilvános bemutató: <a href="https://nipt-betegut-demo.onrender.com/">nipt-betegut-demo.onrender.com</a><br>Útmutató: <a href="https://nipt-betegut-demo.onrender.com/utmutato.html">nipt-betegut-demo.onrender.com/utmutato.html</a></p><p>Mintaadatokkal működő prototípus. Nem klinikai használati előírás.</p><a class="back-top" href="#eleje">↑ Az oldal tetejére</a></footer>
+</main>
+</div>
+</body>
+</html>

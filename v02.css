@@ -400,3 +400,6 @@ body { background: #f5f7f3; }
   #print-report .print-banner { border-color: #709581; }
   #print-report a { color: #253f43; }
 }
+
+/* The handbook opens separately and keeps the current demo session intact. */
+.overview-guide-link{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:.79rem;font-weight:550}.overview-guide-link .icon{width:15px;height:15px}.sidebar-guide-link{display:flex;align-items:center;gap:7px;margin:0 0 19px;color:#d0e3d8;font-size:.74rem;text-decoration:none}.sidebar-guide-link:hover{color:white}.sidebar-guide-link .icon{width:16px;height:16px}.footer-guide-link{font-size:.8rem}

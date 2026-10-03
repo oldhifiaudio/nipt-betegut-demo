@@ -10,16 +10,16 @@ export function createDemoState(){
   const c1=add(16,18,2);c1.id='demo-16';
   recordObservation(s,c1.id,o());
   const p=approvePlan(s,c1.id,{evaluationId:c1.evaluations.at(-1).id,
-    summary:'Ebben a fiktív esetben a célzott magzatvíz-vizsgálatban a jelzett eltérést nem találták. A további genetikai kérdéseket és a várandósgondozás tervét az orvossal külön kell áttekinteni. A lepényi eredet nincs igazolva.',
+    summary:'Ebben a mintaesetben a célzott magzatvíz-vizsgálatban a jelzett eltérést nem találták. A további genetikai kérdéseket és a várandósgondozás tervét az orvossal külön kell áttekinteni. A lepényi eredet nincs igazolva.',
     taskTitle:'Gondozási terv átbeszélése',dueDate:'2026-10-08',override:true,overrideReason:'Bemutató: a megbeszélés közérthető elnevezése.'});publishPlan(s,c1.id,p.id);
   const c2=add(15,17,4);c2.id='demo-15';recordObservation(s,c2.id,o());
   const c3=add(7,13,1);c3.id='demo-7';recordObservation(s,c3.id,o({kind:'ultrasound',specimen:'none',method:'clinical',coversTarget:false}));
   const c4=add(22,16,3);c4.id='demo-22';recordObservation(s,c4.id,o({result:'abnormal'}));
   const c5=add(8,14,5,{pregnancyType:'twins'});c5.id='demo-review';
   const c6=add(16,39,2);c6.id='demo-closed';recordObservation(s,c6.id,o());
-  const p6=approvePlan(s,c6.id,{evaluationId:c6.evaluations.at(-1).id,summary:'A fiktív terhesség gondozásának lezáró megbeszélése.',
+  const p6=approvePlan(s,c6.id,{evaluationId:c6.evaluations.at(-1).id,summary:'A bemutató terhesség gondozásának lezáró megbeszélése.',
     taskTitle:'Lezáró összefoglaló egyeztetése',dueDate:s.demoDate,override:true,overrideReason:'Bemutató: a terhesség lezárását szemléltető konzultáció.'});publishPlan(s,c6.id,p6.id);completeTask(s,c6.id,c6.tasks[0].id);
-  closeCase(s,c6.id,{outcome:'birth',note:'A bemutató terhesség lezárult. A kimenetel kizárólag fiktív.'});
+  closeCase(s,c6.id,{outcome:'birth',note:'A bemutató terhesség lezárult. A kimenetel mintaadat.'});
   s.selectedCaseId=c1.id;return s;
 }
 

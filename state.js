@@ -34,7 +34,7 @@ function dating(input,asOf){
 function oneOf(value,values,message){if(!values.includes(value))throw Error(message);return value;}
 
 export function createCase(state,input){
-  if(input.synthetic!==true)throw Error('Csak fiktív bemutatóeset rögzíthető.');
+  if(input.synthetic!==true)throw Error('Csak mintaeset rögzíthető.');
   const dates=dating(input,state.demoDate);
   const chromosome=Number(input.chromosome);
   if(!Number.isInteger(chromosome)||chromosome<1||chromosome>22)throw Error('Válassz kromoszómát.');
@@ -45,8 +45,8 @@ export function createCase(state,input){
     vanishingTwin:oneOf(input.vanishingTwin,['no','yes','unknown'],'Válassz előzményt.'),
     lab:text(input.lab,100),assay:text(input.assay,60),niptDate:input.niptDate,
     cpmStatus:'unknown',outcome:'ongoing',revision:1,observations:[],evaluations:[],plans:[],publications:[],tasks:[],audit:[],publishedPlanId:null};
-  if(!validDate(c.niptDate,state.demoDate)||dayNumber(c.niptDate)<dayNumber(c.anchorDate)-c.anchorDays)throw Error('Érvénytelen leletdátum: a dátumnak ebbe a fiktív terhességbe kell esnie.');
-  audit(state,c,'Eset létrehozva','Fiktív bemutatóeset.');state.cases.push(c);evaluateCase(state,c.id);return c;
+  if(!validDate(c.niptDate,state.demoDate)||dayNumber(c.niptDate)<dayNumber(c.anchorDate)-c.anchorDays)throw Error('Érvénytelen leletdátum: a dátumnak ebbe a bemutatóeset időszakába kell esnie.');
+  audit(state,c,'Eset létrehozva','Mintaeset.');state.cases.push(c);evaluateCase(state,c.id);return c;
 }
 
 export function recordObservation(state,id,input){
